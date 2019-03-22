@@ -71,6 +71,10 @@ require('./jquery.scrolly.min.js');
 
 require('./util.js');
 
+// Calendar
+
+require('./calendar.js');
+
 // Main js
 
 require('./main.js');

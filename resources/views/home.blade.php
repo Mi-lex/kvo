@@ -23,17 +23,20 @@
 		<!-- Header -->
 		<header id="header">
 			<div class="header-wrapper">
-				<div class="logo">
-					<a class="logo-container" href="{{ url('./') }}">
-						<img src="{{ asset('/images/logo.png') }}" alt="" class="logo-img">
-					</a>
+				<div class="left-side-header">
+					<div class="logo">
+						<a class="logo-container" href="{{ url('./') }}">
+							<img src="{{ asset('/images/logo.png') }}" alt="" class="logo-img">
+						</a>
+					</div>
+					<h1 class="min-title">
+						Коллектив<br>
+						военных<br> 
+						охотников
+					</h1>
 				</div>
-				<h1 class="min-title">
-					Коллектив<br>
-					военных<br> 
-					охотников
-				</h1>
 
+				<div class="auto-jsCalendar"></div>
 			</div>
 		</header>
 

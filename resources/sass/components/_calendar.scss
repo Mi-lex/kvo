@@ -1,0 +1,206 @@
+/*
+ * jsCalendar v1.4.4-beta
+ * 
+ * 
+ * MIT License
+ * 
+ * Copyright (c) 2018 Grammatopoulos Athanasios-Vasileios
+ * 
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ * 
+ * The above copyright notice and this permission notice shall be included in all
+ * copies or substantial portions of the Software.
+ * 
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ * SOFTWARE.
+ * 
+ */
+
+#header {
+    /* Default Theme */
+    /* General style */
+    .jsCalendar * {
+        margin: 0;
+		margin-left: auto;
+		padding: 0;
+		
+		align-self: center;
+		font-size: 12px;
+    }
+
+    .jsCalendar table,
+    .jsCalendar table th,
+    .jsCalendar table td {
+        border: 0;
+    }
+
+    /* Blue default */
+    .jsCalendar table {
+        border-collapse: collapse;
+        border-radius: 4px;
+
+        font-family: Tahoma, Geneva, sans-serif;
+        line-height: normal;
+		margin: 0;
+		width: auto;
+
+        background-color: #000000;
+        box-shadow: 0 0 2px rgba(80, 80, 80, 0.4);
+		color: #CCCCCC;
+	}
+	
+	.jsCalendar table tr:nth-child(2n+1) {
+		background-color: inherit;
+	}
+
+	.jsCalendar table tr {
+		border: none;
+	}
+
+    .jsCalendar thead .jsCalendar-title {
+        height: 20px;
+		line-height: 20px;
+
+		font: inherit;
+		
+		text-transform: capitalize;
+		letter-spacing: normal;
+		color: inherit;
+    }
+
+    .jsCalendar thead .jsCalendar-title-left {
+        float: left;
+    }
+
+    .jsCalendar thead .jsCalendar-title-right {
+        float: right;
+    }
+
+    .jsCalendar thead .jsCalendar-nav-left,
+    .jsCalendar thead .jsCalendar-nav-right {
+        border-radius: 10px;
+        color: #505050;
+        cursor: pointer;
+        font-family: "Courier New", Courier, monospace;
+        font-size: 12px;
+        font-weight: bold;
+        height: 20px;
+        line-height: 20px;
+        margin: 0;
+        text-align: center;
+        transition: color 0.2s, background-color 0.2s;
+        width: 20px;
+    }
+
+    .jsCalendar thead .jsCalendar-nav-left:hover,
+    .jsCalendar thead .jsCalendar-nav-right:hover {
+        background-color: #252525;
+        color: #AAAAAA;
+    }
+
+    .jsCalendar thead .jsCalendar-nav-left {
+        float: left;
+    }
+
+    .jsCalendar thead .jsCalendar-nav-right {
+        float: right;
+    }
+
+    .jsCalendar thead .jsCalendar-title-name {
+        cursor: default;
+        float: left;
+        font-size: 14px;
+        font-weight: lighter;
+        padding: 0 5px;
+    }
+
+    .jsCalendar thead .jsCalendar-nav-left:after {
+        content: "<";
+    }
+
+    .jsCalendar thead .jsCalendar-nav-right:after {
+        content: ">";
+    }
+
+    .jsCalendar thead .jsCalendar-week-days th {
+		text-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
+		text-transform: inherit;
+    }
+
+    .jsCalendar thead .jsCalendar-week-days th,
+    .jsCalendar tbody td {
+        border-radius: 18px;
+        cursor: default;
+        display: inline-block;
+        font-size: 12px;
+        font-weight: lighter;
+        height: 20px;
+        line-height: 20px;
+        margin: 0;
+        text-align: center;
+        transition: color 0.1s, background-color 0.2s;
+		width: 20px;
+		color: inherit
+    }
+
+    .jsCalendar tbody td:hover {
+        background-color: #252525;
+        color: #FFFFFF;
+    }
+
+    .jsCalendar tbody td.jsCalendar-selected {
+        height: 32px;
+        line-height: 32px;
+        width: 32px;
+        box-sizing: content-box;
+
+        background-color: #000000;
+        border: 2px solid #404040;
+    }
+
+    .jsCalendar tbody td.jsCalendar-current {
+        border-radius: 18px;
+        color: #FFFFFF;
+
+        background-color: #252525;
+    }
+
+    .jsCalendar tbody td.jsCalendar-previous,
+    .jsCalendar tbody td.jsCalendar-next {
+        color: #a0ab66;
+    }
+
+    .jsCalendar tbody td.jsCalendar-previous:hover,
+    .jsCalendar tbody td.jsCalendar-next:hover {
+        color: #FFFFFF;
+    }
+
+    .jsCalendar thead {
+        display: block;
+		margin: 2px 4px 0 4px;
+		border: none;
+    }
+
+    .jsCalendar tbody {
+        display: block;
+        margin: 0 4px 2px 4px;
+    }
+
+    .jsCalendar ::-moz-selection {
+        background: #505050;
+    }
+
+    .jsCalendar ::selection {
+        background: #505050;
+    }
+}
