@@ -22,7 +22,7 @@
 		cursor: default;
 		text-align: center;
 		z-index: 1;
-		min-height: 100vh;
+		min-height: 80vh;
 
 		h1 {
 			font-size: 5rem;
@@ -39,7 +39,10 @@
 		& + #header {
 			margin-top: -20rem;
 
-			.logo {
+			.header-wrapper {
+				width: calc(100% - #{_size(padding) * 2});
+				max-width: 72rem;
+
 				@include vendor('transform', 'translateY(2rem)');
 				opacity: 0;
 				visibility: hidden;
@@ -58,7 +61,7 @@
 			visibility: hidden;
 
 			& + #header {
-				.logo {
+				.header-wrapper {
 					@include vendor('transform', 'translateY(0)');
 					opacity: 1;
 					visibility: visible;

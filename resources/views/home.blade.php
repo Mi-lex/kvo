@@ -22,15 +22,31 @@
 
 		<!-- Header -->
 		<header id="header">
-			<a href="index.html" class="logo">КВО</a>
+			<div class="header-wrapper">
+				<div class="logo">
+					<a class="logo-container" href="{{ url('./') }}">
+						<img src="{{ asset('/images/logo.png') }}" alt="" class="logo-img">
+					</a>
+				</div>
+				<h1 class="min-title">
+					Коллектив<br>
+					военных<br> 
+					охотников
+				</h1>
+
+			</div>
 		</header>
 
 		<!-- Nav -->
 		<nav id="nav">
 			<ul class="links">
 				<li class="active"><a href="index.html">Главная</a></li>
+				<li><a href="#">Документы</a></li>
 				<li><a href="#">Фотоальбомы</a></li>
-				<li><a href="#">Темы</a></li>
+				<li><a href="#">Соревнования</a></li>
+				<li><a href="#">Контакты</a></li>
+				<li><a href="#">Базы отдыха</a></li>
+				<li><a href="#">Охотминимум</a></li>
 			</ul>
 		</nav>
 
