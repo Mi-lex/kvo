@@ -54,7 +54,7 @@
 
 		&.main {
 			display: block;
-			margin: (_size(element-margin) * 2) 0;
+			margin: (_size(element-margin) * 1) 0;
 			width: 100%;
 
 			&:first-child {
@@ -62,7 +62,8 @@
 			}
 
 			img {
-				width: 100%;
+				margin: 0 auto;
+				width: 80%;
 			}
 		}
 
