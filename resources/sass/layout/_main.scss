@@ -29,7 +29,7 @@
 		}
 
 		> .post {
-			@include padding((_size(padding) * 4), (_size(padding) * 4));
+			@include padding((_size(padding) * 2), (_size(padding) * 4));
 
 			header {
 				&.major {
@@ -38,11 +38,16 @@
 					}
 
 					> h1, h2 {
-						font-size: 4rem;
+						font-size: 2rem;
 						line-height: 1.1;
 						margin: 0 0 _size(element-margin) 0;
 					}
 				}
+			}
+
+			p {
+				text-align: center;
+				line-height: normal;
 			}
 
 			&.featured {
@@ -69,6 +74,13 @@
 							margin: 0 0 (_size(element-margin) * 0.75) 0;
 						}
 					}
+				}
+			}
+
+			.image {
+				image {
+					display: block;
+					width: 80%;
 				}
 			}
 		}
@@ -101,6 +113,11 @@
 
 				&:nth-child(-n + 2) {
 					border-top-width: 0;
+				}
+
+				p {
+					text-align: center;
+					line-height: normal;
 				}
 			}
 

@@ -13,7 +13,8 @@
 		@include vendor('flex-direction', 'column');
 		@include vendor('justify-content', 'flex-end');
 		@include vendor('user-select', 'none');
-		height: 20rem;
+		height: 16rem;
+		padding-top: 1rem;
 		padding-bottom: (_size(padding) * 2.5);
 		position: relative;
 		text-align: center;
@@ -29,6 +30,14 @@
 		}
 
 		.header-wrapper {
+			@include vendor('transition', (
+				'border-color #{_duration(transition)} ease-in-out',
+				'color #{_duration(transition)} ease-in-out',
+				'opacity 0.5s ease',
+				'transform 0.5s ease',
+				'visibility 0.5s'
+			));
+
 			display: flex;
 			justify-content: space-between;
 			height: 160px;
@@ -56,6 +65,8 @@
 			height: 100%;
 
 			border-bottom: none;
+
+			text-align: left;
 		}
 
 		.logo-img {

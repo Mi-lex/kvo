@@ -6,6 +6,11 @@
 
 /* Intro */
 
+	.header-wrapper {
+		width: calc(100% - #{_size(padding) * 2});
+		max-width: 72rem;
+	}
+
 	#intro {
 		@include color-typography(invert);
 		@include color-button(invert);
@@ -42,10 +47,6 @@
 			.header-wrapper {
 				width: calc(100% - #{_size(padding) * 2});
 				max-width: 72rem;
-
-				@include vendor('transform', 'translateY(2rem)');
-				opacity: 0;
-				visibility: hidden;
 			}
 		}
 
