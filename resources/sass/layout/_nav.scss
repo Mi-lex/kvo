@@ -54,10 +54,10 @@
 						outline: none;
 						padding: 0 1.5rem;
 
-						// &:hover {
-						// 	color: rgb(39, 80, 39) !important;
-						// 	background-color: transparentize(_palette(invert, fg), 0.9);
-						// }
+						&:hover {
+							color: inherit !important;
+							background-color: transparentize(_palette(invert, fg), 0.9);
+						}
 					}
 
 					&.active {

@@ -29,29 +29,37 @@
 		}
 
 		> .post {
-			@include padding((_size(padding) * 2), (_size(padding) * 4));
+			padding: 4rem 0 2rem 0;
 
 			header {
 				&.major {
 					> .date {
 						margin-top: -2rem;
+						margin-bottom: 1rem;
 					}
 
 					> h1, h2 {
 						font-size: 2rem;
 						line-height: 1.1;
 						margin: 0 0 _size(element-margin) 0;
+						margin-bottom: 1rem;
 					}
 				}
 			}
 
 			p {
-				text-align: center;
 				line-height: normal;
+				padding: 0 2rem 0 2rem;
 			}
 
 			&.featured {
 				text-align: center;
+				padding: 4rem 0 2rem 0;
+
+				p {
+					text-align: center;
+					line-height: normal;
+				}
 			}
 
 			@include breakpoint('<=large') {

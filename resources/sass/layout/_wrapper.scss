@@ -4,6 +4,8 @@
 /// Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 ///
 
+
+
 /* Wrapper */
 
 	#wrapper {
@@ -19,7 +21,7 @@
 			width: 100vw;
 				height: 100vh;
 			background-color:		_palette(wrapper-bg);
-			background-image:		url(http://10.154.145.59/kvo/public/images/overlay.png),	linear-gradient(0deg, rgba(0,0,0,0.1), rgba(0,0,0,0.1)),	url(http://10.154.145.59/kvo/public/images/bg.jpg);
+			background-image:		url('../../images/overlay.png'),	linear-gradient(0deg, rgba(0,0,0,0.1), rgba(0,0,0,0.1)),	url('../../images/bg.jpg');
 			background-size:		auto,								auto,														100% auto;
 			background-position:	center,								center,														top center;
 			background-repeat:		repeat,								no-repeat,													no-repeat;
