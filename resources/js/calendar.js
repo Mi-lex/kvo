@@ -201,7 +201,7 @@ var jsCalendar = (function(){
         zeroFill : false,
         monthFormat : 'month',
         dayFormat : 'D',
-        firstDayOfTheWeek : 1,
+        firstDayOfTheWeek : 2,
         navigator : true,
         navigatorPosition : 'both',
         min : false,
