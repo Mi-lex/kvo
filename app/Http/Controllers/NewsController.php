@@ -10,4 +10,14 @@ class NewsController extends Controller
     {
         return view('pages.news');
     }
+
+    public function create()
+    {
+        return view('pages.create-new');  
+    }
+
+    public function store(Request $request)
+    {
+        return response($request->post());
+    }
 }

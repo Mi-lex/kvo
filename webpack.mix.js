@@ -24,10 +24,16 @@ mix.webpackConfig({
    }
 })
 
+
+
 mix.js('resources/js/app.js', 'public/js')
+   .js('resources/js/pages/form.js', 'public/js')
    .sass('resources/sass/main.scss', 'public/css')
    .sass('resources/sass/noscript.scss', 'public/css')
    .copy('resources/images', 'public/images', false)
-//    .copy('resources/fonts', 'public/fonts/', false)
-//    .copy('node_modules/font-awesome/fonts', 'public/fonts', false)
-   .copy('node_modules/font-awesome/fonts', 'public/fonts', false);
+   .copy('resources/sass/dropzone.css', 'public/css', false)
+   .copy('resources/sass/simplemde.css', 'public/css', false);
+
+
+// For changing only css
+// mix.sass('resources/sass/main.scss', 'public/css');

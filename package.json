@@ -25,6 +25,7 @@
         "browser": "^0.2.6",
         "font-awesome": "^4.7.0",
         "jquery": "^3.3.1",
-        "jquery.scrollex": "^0.2.1"
+        "jquery.scrollex": "^0.2.1",
+        "simplemde": "^1.11.2"
     }
 }

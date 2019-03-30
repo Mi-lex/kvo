@@ -17,3 +17,6 @@ Route::get('/', 'MainController@home');
 
 
 Route::get('/news/3', 'NewsController@show');
+
+Route::get('/news/add', 'NewsController@create');
+Route::post('/news/add', 'NewsController@store');
