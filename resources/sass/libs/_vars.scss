@@ -19,8 +19,8 @@
 
 // Font.
 	$font: (
-		family:				('Times New Roman', Times, serif),
-		family-heading:		('Times New Roman', Times, serif),
+		family:				('Merriweather', Georgia, serif),
+		family-heading:		('Merriweather', Georgia, serif),
 		family-fixed:		('Courier New', monospace),
 		weight:				300,
 		weight-bold:		600,
@@ -60,3 +60,6 @@
 			accent:			rgb(39, 80, 39),
 		),
 	);
+
+// Url
+	$home: ''
