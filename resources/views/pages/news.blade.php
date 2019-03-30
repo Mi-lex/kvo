@@ -1,8 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-    <!-- Featured Post -->
-    <article class="post">
+    <!-- Featured new -->
+    <article class="new">
         <header class="major">
             <span class="date">Декабрь 7, 2018</span>
             <h2><a href="#">Соревнования по спортивно-охотничьей стрельбе</a></h2>

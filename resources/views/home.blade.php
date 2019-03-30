@@ -1,19 +1,19 @@
 @extends('layouts.app')
 
 @section('content')
-	{{-- Featured Post --}}
-	<article class="post featured">
+	{{-- Featured new --}}
+	<article class="new featured">
 		<header class="major">
 			<span class="date">Декабрь 7, 2018</span>
-			<h2><a href="{{ url('/post/3') }}">Соревнования по спортивно-охотничьей стрельбе</a></h2>
+			<h2><a href="{{ url('/new/3') }}">Соревнования по спортивно-охотничьей стрельбе</a></h2>
 		</header>
-		<a href="{{ url('/post/3') }}" class="image main"><img src="images/pic02.jpg" alt="" /></a>
+		<a href="{{ url('/new/3') }}" class="image main"><img src="images/pic02.jpg" alt="" /></a>
 		<ul class="actions special">
-			<li><a href="{{ url('/post/3') }}" class="button large">Полностью</a></li>
+			<li><a href="{{ url('/new/3') }}" class="button large">Читать</a></li>
 		</ul>
 	</article>
 	{{-- News --}}
-	<section class="posts">
+	<section class="news">
 		<article>
 			<header>
 				<span class="date">Март 23, 2018</span>
@@ -26,7 +26,7 @@
 				и охотниками, так как ранее правительство не проводило "военных действий" против диких кабанов.
 			</p>
 			<ul class="actions special">
-				<li><a href="#" class="button">Полностью</a></li>
+				<li><a href="#" class="button">Читать</a></li>
 			</ul>
 		</article>
 		<article>
@@ -37,7 +37,7 @@
 			<a href="#" class="image fit"><img src="images/pic03.jpg" alt="" /></a>
 			<p>Состоялись соревнования по спортивно-охотничьей стрельбе среди постоянного состава военной академии связи.</p>
 			<ul class="actions special">
-				<li><a href="#" class="button">Полностью</a></li>
+				<li><a href="#" class="button">Читать</a></li>
 			</ul>
 		</article>
 	</section>

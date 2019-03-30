@@ -28,7 +28,7 @@
 			text-align: center;
 		}
 
-		> .post {
+		> .new {
 			padding: 4rem 0 2rem 0;
 
 			header {
@@ -93,7 +93,7 @@
 			}
 		}
 
-		> .posts {
+		> .news {
 			@include fixed-grid((
 				columns:			2,
 				gutters:			(_size(padding) * 4),
