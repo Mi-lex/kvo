@@ -14,3 +14,6 @@
 // Home
 
 Route::get('/', 'MainController@home');
+
+
+Route::get('/news/3', 'NewsController@show');

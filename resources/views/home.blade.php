@@ -1,181 +1,59 @@
-<!DOCTYPE HTML>
-<html>
-<head>
-	<title>KVO</title>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-	<link rel="stylesheet" href="{{ asset('css/main.css') }}" />
-	<noscript>
-		<link rel="stylesheet" href="{{ asset('css/noscript.css')}} " /></noscript>
-</head>
+@extends('layouts.app')
 
-<body class="is-preload">
-
-	<!-- Wrapper -->
-	<div id="wrapper" class="fade-in">
-		<!-- Intro -->
-		{{-- <div id="intro">
-			<h1>Коллектив<br>
-				военных<br> 
-				охотников</h1>
-		</div> --}}
-
-		<!-- Header -->
-		<header id="header">
-			<div class="header-wrapper">
-				<div class="left-side-header">
-					<div class="logo">
-						<a class="logo-container" href="{{ url('./') }}">
-							<img src="{{ asset('/images/logo.png') }}" alt="" class="logo-img">
-						</a>
-					</div>
-					<h1 class="min-title">
-						Коллектив<br>
-						военных<br> 
-						охотников
-					</h1>
-				</div>
-
-				<div class="auto-jsCalendar"></div>
-			</div>
+@section('content')
+	{{-- Featured Post --}}
+	<article class="post featured">
+		<header class="major">
+			<span class="date">Декабрь 7, 2018</span>
+			<h2><a href="{{ url('/post/3') }}">Соревнования по спортивно-охотничьей стрельбе</a></h2>
 		</header>
-
-		<!-- Nav -->
-		<nav id="nav">
-			<ul class="links">
-				<li class="active"><a href="index.html">Главная</a></li>
-				<li><a href="#">Документы</a></li>
-				<li><a href="#">Фотоальбомы</a></li>
-				<li><a href="#">Соревнования</a></li>
-				<li><a href="#">Контакты</a></li>
-				<li><a href="#">Базы отдыха</a></li>
-				<li><a href="#">Охотминимум</a></li>
+		<a href="{{ url('/post/3') }}" class="image main"><img src="images/pic02.jpg" alt="" /></a>
+		<ul class="actions special">
+			<li><a href="{{ url('/post/3') }}" class="button large">Полностью</a></li>
+		</ul>
+	</article>
+	{{-- News --}}
+	<section class="posts">
+		<article>
+			<header>
+				<span class="date">Март 23, 2018</span>
+				<h2><a href="#">Польша может привлечь армию для отстрела кабанов</a></h2>
+			</header>
+			<a href="#" class="image fit"><img src="images/pic01.jpg" alt="" /></a>
+			<p>Инициатива принадлежит заместителю министра сельского хозяйства республики Рышарду Зарудзки.
+				По словам главы ведомства, организованный отстрел предстоит согласовать с Министерством
+				окружающей среды
+				и охотниками, так как ранее правительство не проводило "военных действий" против диких кабанов.
+			</p>
+			<ul class="actions special">
+				<li><a href="#" class="button">Полностью</a></li>
 			</ul>
-		</nav>
-
-		<!-- Main -->
-		<div id="main">
-			<!-- Featured Post -->
-			<article class="post featured">
-				<header class="major">
-					<span class="date">Декабрь 7, 2018</span>
-					<h2><a href="#">Соревнования по спортивно-охотничьей стрельбе</a></h2>
-				</header>
-				<a href="#" class="image main"><img src="images/pic02.jpg" alt="" /></a>
-				<p>Состоялись соревнования по спортивно-охотничьей стрельбе среди постоянного состава военной академии связи.</p>
-				<ul class="actions special">
-					<li><a href="#" class="button large">Полностью</a></li>
-				</ul>
-			</article>
-			<!-- Posts -->
-			<section class="posts">
-				<article>
-					<header>
-						<span class="date">Март 23, 2018</span>
-						<h2><a href="#">Польша может привлечь армию для отстрела кабанов</a></h2>
-					</header>
-					<a href="#" class="image fit"><img src="images/pic01.jpg" alt="" /></a>
-					<p>Инициатива принадлежит заместителю министра сельского хозяйства республики Рышарду Зарудзки.
-						По словам главы ведомства, организованный отстрел предстоит согласовать с Министерством
-						окружающей среды
-						и охотниками, так как ранее правительство не проводило "военных действий" против диких кабанов.
-					</p>
-					<ul class="actions special">
-						<li><a href="#" class="button">Полностью</a></li>
-					</ul>
-				</article>
-				<article>
-					<header>
-						<span class="date">Май 24, 2018</span>
-						<h2><a href="#">Соревнования по спортивно-охотничьей стрельбе</a></h2>
-					</header>
-					<a href="#" class="image fit"><img src="images/pic03.jpg" alt="" /></a>
-					<p>Состоялись соревнования по спортивно-охотничьей стрельбе среди постоянного состава военной академии связи.</p>
-					<ul class="actions special">
-						<li><a href="#" class="button">Полностью</a></li>
-					</ul>
-				</article>
-			</section>
-
-			<!-- Footer -->
-			<footer>
-				<div class="pagination">
-					<!--<a href="#" class="previous">Предыдущие</a>-->
-					<a href="#" class="page active">1</a>
-					<a href="#" class="page">2</a>
-					<a href="#" class="page">3</a>
-					<span class="extra">&hellip;</span>
-					<a href="#" class="page">8</a>
-					<a href="#" class="page">9</a>
-					<a href="#" class="page">10</a>
-					<a href="#" class="next">Следующие</a>
-				</div>
-			</footer>
-
-		</div>
-
-		<!-- Footer -->
-		<!-- <footer id="footer">
-						<section>
-							<form method="post" action="#">
-								<div class="fields">
-									<div class="field">
-										<label for="name">Name</label>
-										<input type="text" name="name" id="name" />
-									</div>
-									<div class="field">
-										<label for="email">Email</label>
-										<input type="text" name="email" id="email" />
-									</div>
-									<div class="field">
-										<label for="message">Message</label>
-										<textarea name="message" id="message" rows="3"></textarea>
-									</div>
-								</div>
-								<ul class="actions">
-									<li><input type="submit" value="Send Message" /></li>
-								</ul>
-							</form>
-						</section>
-						<section class="split contact">
-							<section class="alt">
-								<h3>Address</h3>
-								<p>1234 Somewhere Road #87257<br />
-								Nashville, TN 00000-0000</p>
-							</section>
-							<section>
-								<h3>Phone</h3>
-								<p><a href="#">(000) 000-0000</a></p>
-							</section>
-							<section>
-								<h3>Email</h3>
-								<p><a href="#">info@untitled.tld</a></p>
-							</section>
-							<section>
-								<h3>Social</h3>
-								<ul class="icons alt">
-									<li><a href="#" class="icon alt fa-twitter"><span class="label">Twitter</span></a></li>
-									<li><a href="#" class="icon alt fa-facebook"><span class="label">Facebook</span></a></li>
-									<li><a href="#" class="icon alt fa-instagram"><span class="label">Instagram</span></a></li>
-									<li><a href="#" class="icon alt fa-github"><span class="label">GitHub</span></a></li>
-								</ul>
-							</section>
-						</section>
-					</footer> -->
-
-		<!-- Copyright -->
-		<div id="copyright">
-			<ul>
-				<li>&copy; ВАС</li>
-				<li>Design: Mishin Alexey</li>
+		</article>
+		<article>
+			<header>
+				<span class="date">Май 24, 2018</span>
+				<h2><a href="#">Соревнования по спортивно-охотничьей стрельбе</a></h2>
+			</header>
+			<a href="#" class="image fit"><img src="images/pic03.jpg" alt="" /></a>
+			<p>Состоялись соревнования по спортивно-охотничьей стрельбе среди постоянного состава военной академии связи.</p>
+			<ul class="actions special">
+				<li><a href="#" class="button">Полностью</a></li>
 			</ul>
+		</article>
+	</section>
+
+	{{-- Footer --}}
+	<footer>
+		<div class="pagination">
+			<!--<a href="#" class="previous">Предыдущие</a>-->
+			<a href="#" class="page active">1</a>
+			<a href="#" class="page">2</a>
+			<a href="#" class="page">3</a>
+			<span class="extra">&hellip;</span>
+			<a href="#" class="page">8</a>
+			<a href="#" class="page">9</a>
+			<a href="#" class="page">10</a>
+			<a href="#" class="next">Следующие</a>
 		</div>
-
-		<div class="bg"></div>
-	</div>
-
-	<!-- Scripts -->
-	<script src="{{ asset('js/app.js') }}"></script>
-</body>
-
-</html>
+	</footer>
+@endsection
