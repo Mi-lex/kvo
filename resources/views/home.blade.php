@@ -2,26 +2,25 @@
 
 @section('content')
 	{{-- Featured new --}}
-	@if (isset($major_news) && request('page') < 2)
+	@if($page < 2)
 		<article class="new featured">
 			<header class="major">
-				<span class="date">{{ $major_news->created_at->toFormattedDateString() }}</span>
+				<span class="date">{{ $last_news->created_at->toFormattedDateString() }}</span>
 				<h2>
-					<a href="{{ url("/news/$major_news->id") }}">
-						{{ $major_news->title }}
+					<a href="{{ url("/news/$last_news->id") }}">
+						{{ $last_news->title }}
 					</a>
 				</h2>
 			</header>
 			<a href="{{ url('/new/3') }}" class="image main">
-				<img src="{{ $major_news->main_image() }}" alt="" />
+				<img src="{{ $last_news->main_image() }}" alt="" />
 			</a>
 			<ul class="actions special">
 				<li>
-					<a href="{{ url("/news/$major_news->id") }}" class="button large">Читать</a>
+					<a href="{{ url("/news/$last_news->id") }}" class="button large">Читать</a>
 				</li>
 			</ul>
 		</article>
-		
 	@endif
 	{{-- News --}}
 	<section class="news">
