@@ -66,25 +66,6 @@
 				@include padding((_size(padding) * 3), (_size(padding) * 2));
 			}
 
-			@include breakpoint('<=small') {
-				@include padding((_size(padding) * 2), (_size(padding) * 1));
-
-				header {
-					&.major {
-						> .date {
-							margin-top: -1rem;
-							margin-bottom: _size(element-margin);
-						}
-
-						> h1, h2 {
-							font-size: 2.5rem;
-							line-height: 1.2;
-							margin: 0 0 (_size(element-margin) * 0.75) 0;
-						}
-					}
-				}
-			}
-
 			.image {
 				image {
 					display: block;
@@ -128,56 +109,5 @@
 					line-height: normal;
 				}
 			}
-
-			@include breakpoint('<=medium') {
-				@include fixed-grid-resize((
-					columns:			2,
-					gutters:			(_size(padding) * 2.5),
-					flush:				false
-				));
-			}
-
-			@include breakpoint('<=small') {
-				@include fixed-grid-resize((
-					columns:			1,
-					gutters:			(_size(padding) * 2),
-					prev-columns:		2,
-					flush:				false
-				));
-
-				> article {
-					&:nth-child(2n - 1) {
-						border-left-width: 2px;
-					}
-
-					&:nth-child(-n + 2) {
-						border-top-width: 2px;
-					}
-
-					&:nth-child(n) {
-						border-left-width: 0;
-					}
-
-					&:nth-child(-n + 1) {
-						border-top-width: 0;
-					}
-
-					.image {
-						max-width: 25rem;
-						margin-left: auto;
-						margin-right: auto;
-					}
-				}
-			}
-		}
-
-		@include breakpoint('<=small') {
-			> * {
-				@include padding((_size(padding) * 1), (_size(padding) * 1));
-			}
-		}
-
-		@include breakpoint('<=xsmall') {
-			width: 100%;
 		}
 	}

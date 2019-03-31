@@ -67,16 +67,6 @@
 				width: 80%;
 			}
 		}
-
-		@include breakpoint('<=small') {
-			&.fit {
-				margin: _size(element-margin) 0;
-			}
-
-			&.main {
-				margin: _size(element-margin) 0;
-			}
-		}
 	}
 
 	a.image {

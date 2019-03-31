@@ -41,15 +41,6 @@
 				background-color: _palette(bg);
 			}
 		}
-
-		@include breakpoint('<=medium') {
-			display: block;
-		}
-
-		@include breakpoint('<=small') {
-			font-size: 0.8rem;
-			padding: 0.25rem 1rem;
-		}
 	}
 
 	#navPanel {
@@ -121,33 +112,6 @@
 
 			&:hover {
 				color: _palette(fg-bold);
-			}
-
-			@include breakpoint('<=small') {
-				height: 4rem;
-				line-height: 4rem;
-			}
-		}
-
-		@include breakpoint('<=medium') {
-			display: block;
-		}
-
-		@include breakpoint('<=small') {
-			padding: 2.5rem 1.75rem;
-		}
-	}
-
-	@include breakpoint('<=medium') {
-		body.is-navPanel-visible {
-			#wrapper {
-				opacity: 0.5;
-			}
-
-			#navPanel {
-				@include vendor('transform', 'translateX(0)');
-				box-shadow: 0 0 1.5rem 0 rgba(0,0,0,0.2);
-				visibility: visible;
 			}
 		}
 	}

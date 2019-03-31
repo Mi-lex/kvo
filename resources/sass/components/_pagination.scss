@@ -62,18 +62,6 @@
 				margin-left: (0.75em / 0.8);
 			}
 		}
-
-		@include breakpoint('<=medium') {
-			a, span {
-				font-size: 0.9rem;
-			}
-		}
-
-		@include breakpoint('<=xsmall') {
-			.page, .extra {
-				display: none;
-			}
-		}
 	}
 
 	@mixin color-pagination($p: null) {

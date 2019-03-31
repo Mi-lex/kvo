@@ -94,90 +94,6 @@
 		p {
 			font-size: 0.8rem;
 		}
-
-		@include breakpoint('<=medium') {
-			display: block;
-
-			> section {
-				border-top: solid 2px _palette(alt, border);
-
-				&:first-child {
-					border-top: 0;
-				}
-
-				&.split {
-					> section {
-						@include padding((_size(padding) * 2), (_size(padding) * 2));
-
-						&:first-child {
-							@include padding((_size(padding) * 2), (_size(padding) * 2));
-						}
-
-						&:last-child {
-							@include padding((_size(padding) * 2), (_size(padding) * 2));
-						}
-					}
-
-					&.contact {
-						> section {
-							padding: (_size(padding) * 2);
-
-							&:first-child {
-								padding: (_size(padding) * 2);
-							}
-
-							&:last-child {
-								padding: (_size(padding) * 2);
-							}
-						}
-					}
-				}
-			}
-
-			form label,
-			h3,
-			p {
-				font-size: 0.9rem;
-			}
-		}
-
-		@include breakpoint('<=small') {
-			> section {
-				@include padding((_size(padding) * 1), (_size(padding) * 1));
-
-				&.split {
-					> section {
-						@include padding((_size(padding) * 1), (_size(padding) * 1));
-
-						&:first-child {
-							@include padding((_size(padding) * 1), (_size(padding) * 1));
-						}
-
-						&:last-child {
-							@include padding((_size(padding) * 1), (_size(padding) * 1));
-						}
-					}
-
-					&.contact {
-						> section {
-							padding: (_size(padding) * 1);
-
-							&:first-child {
-								padding: (_size(padding) * 1);
-							}
-
-							&:last-child {
-								padding: (_size(padding) * 1);
-							}
-						}
-					}
-				}
-			}
-		}
-
-		@include breakpoint('<=xsmall') {
-			width: 100%;
-		}
 	}
 
 	#copyright {
@@ -224,20 +140,5 @@
 
 		@include breakpoint('<=large') {
 			margin: (_size(padding) * 2) auto;
-		}
-
-		@include breakpoint('<=xsmall') {
-			ul {
-				li {
-					border-left: 0;
-					margin: 1rem 0 0 0;
-					padding-left: 0;
-					display: block;
-
-					&:first-child {
-						margin-top: 0;
-					}
-				}
-			}
 		}
 	}

@@ -40,32 +40,6 @@
 				}
 			}
 		}
-
-		@include breakpoint('<=xsmall') {
-			> .fields {
-				$gutter: (_size(element-margin) * 0.75);
-
-				width: calc(100% + #{$gutter * 2});
-				margin: ($gutter * -1) 0 _size(element-margin) ($gutter * -1);
-
-				> .field {
-					padding: $gutter 0 0 $gutter;
-					width: calc(100% - #{$gutter * 1});
-
-					&.half {
-						width: calc(100% - #{$gutter * 1});
-					}
-
-					&.third {
-						width: calc(100% - #{$gutter * 1});
-					}
-
-					&.quarter {
-						width: calc(100% - #{$gutter * 1});
-					}
-				}
-			}
-		}
 	}
 
 	label {
@@ -77,10 +51,6 @@
 		font-size: 0.8rem;
 		text-transform: uppercase;
 		margin: 0 0 (_size(element-margin) * 0.375) 0;
-
-		@include breakpoint('<=medium') {
-			font-size: 0.9rem;
-		}
 	}
 
 	input[type="text"],
