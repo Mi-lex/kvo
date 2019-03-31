@@ -61,7 +61,7 @@
 					}
 
 					&.active {
-						background-color: #d2d2d2;
+						background-color: _palette(bg);
 
 						a {
 							color: _palette(invert, bg);
