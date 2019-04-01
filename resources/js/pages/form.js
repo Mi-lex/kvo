@@ -6,7 +6,7 @@ var Dropzone = require('../dropzone');
 
 var SimpleMDE = require('simplemde');
 
-var textareaElement = document.getElementById("demo1");
+var textareaElement = document.getElementById("body");
 
 var simplemde = new SimpleMDE({
     element: textareaElement,
@@ -22,7 +22,7 @@ Dropzone.options.myDropzone= {
   uploadMultiple: true,
   parallelUploads: 50,
   maxFiles: 50,
-  maxFilesize: 1,
+  maxFilesize: 10,
   acceptedFiles: 'image/*',
   addRemoveLinks: true,
   init: function() {
@@ -39,12 +39,17 @@ Dropzone.options.myDropzone= {
       //send all the form data along with the files:
       this.on("sendingmultiple", function(data, xhr, formData) {
           formData.append("title", $("#title").val())
-          formData.append("text", simplemde.value());
+          formData.append("body", simplemde.value());
           formData.append('_token', $('meta[name="csrf-token"]').attr('content'));
       });
 
       this.on("successmultiple", function(files, response) {
+        window.location.href = ("/");
         console.log(response);
       });
-  }
+
+      this.on("errormultiple", function(files, response) {
+        console.log(response);
+      });
+  },
 }

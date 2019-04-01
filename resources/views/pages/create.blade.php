@@ -23,12 +23,13 @@
                     <div class="dz-default dz-message">
                         Добавьте фотографии сюда
                     </div>
+                    <div class="dz-error-message"><span data-dz-errormessage></span></div>
                 </div>
             </div>
 
             <div class="field">
-                <label for="name">Текст новости</label>
-                <textarea id="demo1" name="post-text"></textarea>
+                <label for="body">Текст новости</label>
+                <textarea id="body" name="body"></textarea>
             </div>
         </div>
         <ul class="actions">

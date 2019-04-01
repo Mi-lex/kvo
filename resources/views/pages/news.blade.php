@@ -13,8 +13,8 @@
                 data-nav="thumbs">
     
                 @foreach ($news->images as $image)
-                    <a href="{{ $image->resized_name }}">
-                        <img src="{{ $image->filename }}">
+                    <a href="{{ asset("/images/$image->filename") }}">
+                        <img src="{{ asset("/images/$image->resized_name") }}">
                     </a>
                 @endforeach
             </div>
