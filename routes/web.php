@@ -12,9 +12,10 @@
 */
 
 // Home
-Route::get('/', 'NewsController@show');
+Route::get('/', 'NewsController@list');
+
+Route::get('/news/create', 'NewsController@create');
+Route::post('/news/create', 'NewsController@store');
 
 Route::get('/news/{news}', 'NewsController@show');
 
-Route::get('/news/add', 'NewsController@create');
-Route::post('/news/add', 'NewsController@store');

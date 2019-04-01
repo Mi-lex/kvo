@@ -1,8 +1,6 @@
 @extends('layouts.app')
 
 @section('libraries')
-    <link rel="stylesheet" href="{{ asset('css/simplemde.css') }}" />
-    <link rel="stylesheet" href="{{ asset('/css/dropzone.css') }}" />
     <style>
         .another_form {
             background: white;
@@ -11,11 +9,7 @@
 @endsection
 
 @section('content')
-    <section class="post">
-        @markdown('This *text* will be **parsed** to [HTML](http://laravel.com).')
-    </section>
-
-    <form method="post" enctype="multipart/form-data" action="/news/add" class="another_form">
+    <form method="post" enctype="multipart/form-data" action="/news/create" class="another_form">
         {{ csrf_field() }}
         <div class="fields">
             <div class="field">

@@ -9,7 +9,7 @@ class NewsController extends Controller
 {
     private $last_news;
 
-    public function show(Request $request)
+    public function list(Request $request)
     {
         $page = $request->page;
 
@@ -20,14 +20,20 @@ class NewsController extends Controller
 
         $last_news = $this->last_news;
 
-        $news = News::where('id', '<', $last_news->id)->paginate(4);
+        $news = News::where('id', '<', $last_news->id)
+            ->latest('id')->paginate(4);
 
         return view('home', compact('news', 'last_news', 'page'));
     }
 
+    public function show(News $news)
+    {
+        return view('pages.news', compact('news'));    
+    }
+
     public function create()
     {
-        return view('pages.create-new');  
+        return view('pages.create');
     }
 
     public function store(Request $request)

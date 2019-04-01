@@ -17,7 +17,7 @@ var simplemde = new SimpleMDE({
 // dropzone start
 
 Dropzone.options.myDropzone= {
-  url: '/news/add',
+  url: '/news/create',
   autoProcessQueue: false,
   uploadMultiple: true,
   parallelUploads: 50,

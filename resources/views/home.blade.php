@@ -28,13 +28,15 @@
 			<article>
 				<header>
 					<span class="date">{{ $news_item->created_at->toFormattedDateString() }}</span>
-					<h2><a href="#">{{ $news_item->title }}</a></h2>
+					<h2><a href="{{ url("/news/$news_item->id")  }}">{{ $news_item->title }}</a></h2>
 				</header>
-				<a href="#" class="image fit">
+				<a href="{{ url("/news/$news_item->id")  }}" class="image fit">
 					<img src="{{ $news_item->main_image() }}" alt=""/>
 				</a>
 				<ul class="actions special">
-					<li><a href="#" class="button">Читать</a></li>
+					<li>
+						<a href="{{ url("/news/$news_item->id")  }}" class="button">Читать</a>
+					</li>
 				</ul>
 			</article>
 		@endforeach
