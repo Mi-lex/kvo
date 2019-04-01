@@ -13,7 +13,7 @@
 				</h2>
 			</header>
 			<a href="{{ url('/new/3') }}" class="image main">
-				<img src="{{ $last_news->main_image() }}" alt="" />
+				<img src="{{ asset('images/'.$last_news->main_image()) }}" alt="" />
 			</a>
 			<ul class="actions special">
 				<li>
@@ -32,7 +32,7 @@
 						<h2><a href="{{ url("/news/$news_item->id")  }}">{{ $news_item->title }}</a></h2>
 					</header>
 					<a href="{{ url("/news/$news_item->id")  }}" class="image fit">
-						<img src="{{ $news_item->main_image() }}" alt=""/>
+						<img src="{{ asset('images/'.$news_item->main_image())  }}" alt=""/>
 					</a>
 					<ul class="actions special">
 						<li>
