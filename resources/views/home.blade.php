@@ -12,7 +12,7 @@
 					</a>
 				</h2>
 			</header>
-			<a href="{{ url('/new/3') }}" class="image main">
+			<a href="{{ url("/news/$last_news->id") }}" class="image main">
 				<img src="{{ asset('images/'.$last_news->main_image()) }}" alt="" />
 			</a>
 			<ul class="actions special">

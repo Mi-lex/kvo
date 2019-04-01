@@ -34,6 +34,7 @@
 						охотников
 					</h1>
 				</div>
+				<div class="kvo-clock"></div>
 
 				<div class="auto-jsCalendar"></div>
 			</div>
