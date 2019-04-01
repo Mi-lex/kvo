@@ -17,7 +17,8 @@ class CreateImagesTable extends Migration
             $table->increments('id');
 
             $table->unsignedInteger('news_id');
-            $table->foreign('news_id')->references('id')->on('news');
+            $table->foreign('news_id')->references('id')->on('news')
+                ->onDelete('cascade');
 
             $table->text('filename');
             $table->text('resized_name');
