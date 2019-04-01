@@ -52,4 +52,8 @@ Dropzone.options.myDropzone= {
         console.log(response);
       });
   },
+
+  error: function(file, response) {
+    console.log(response);
+  }
 }

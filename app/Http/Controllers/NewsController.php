@@ -28,8 +28,10 @@ class NewsController extends Controller
 
         $last_news = $this->last_news;
 
-        $news = News::where('id', '<', $last_news->id)
-            ->latest('id')->paginate(4);
+        $news = $last_news ?  News::where('id', '<', $last_news->id)
+            ->latest('id')->paginate(4) : 
+            null;
+           
 
         return view('home', compact('news', 'last_news', 'page'));
     }
