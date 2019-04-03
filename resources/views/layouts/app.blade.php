@@ -17,8 +17,6 @@
 
 	<!-- Wrapper -->
 	<div id="wrapper" class="fade-in">
-		<!-- Intro -->
-
 		<!-- Header -->
 		<header id="header">
 			<div class="header-wrapper">

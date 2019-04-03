@@ -5,6 +5,10 @@
 ///
 
 /* Header */
+	.header-wrapper {
+		width: calc(100% - #{_size(padding) * 2});
+		max-width: 72rem;
+	}
 
 	#header {
 		@include color-typography(invert);
