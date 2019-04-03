@@ -1,0 +1,33 @@
+.form-control {
+    &.is-invalid {
+        border-color: #dc3545;
+
+        &:focus {
+            border-color: #dc3545;
+        }
+    }
+}
+
+.invalid-feedback {
+    display: none;
+    width: 100%;
+    margin-top: .25rem;
+    font-size: 80%;
+
+    strong {
+        color: #dc3545;
+    }
+}
+
+.form-control.is-invalid~.invalid-feedback, .form-control.is-invalid~.invalid-tooltip, .was-validated .form-control:invalid~.invalid-feedback, .was-validated .form-control:invalid~.invalid-tooltip {
+    display: block
+}
+
+.custom-file-input.is-invalid~.invalid-feedback, .custom-file-input.is-invalid~.invalid-tooltip, .was-validated .custom-file-input:invalid~.invalid-feedback, .was-validated .custom-file-input:invalid~.invalid-tooltip {
+    display: block
+}
+
+.login-header h2 {
+    text-transform: capitalize;
+}
+

@@ -10,7 +10,7 @@
 
 @section('content')
     <form method="post" enctype="multipart/form-data" action="/news/create" class="another_form">
-        {{ csrf_field() }}
+        @csrf
         <div class="fields">
             <div class="field">
                 <label for="title">Заголовок</label>
