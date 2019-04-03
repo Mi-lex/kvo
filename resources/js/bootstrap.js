@@ -75,6 +75,10 @@ require('./util.js');
 
 require('./calendar.js');
 
+// Clock
+
+require('./clock');
+
 // Main js
 
 require('./main.js');
