@@ -1,0 +1,30 @@
+.note {
+    position: relative;
+
+    &__date {
+        position: absolute;
+        bottom: 2rem;
+        right: 2rem;
+        font-style: italic;
+    }
+
+    &__documents {
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+    
+        padding: 0;
+    }
+    
+    &__document-item {
+        font-size: 48px;
+        line-height: normal;
+        padding-left: 0;
+        padding-right: 1rem;
+    }
+    
+    &__description-text {
+        margin: 0;
+    }
+}
+

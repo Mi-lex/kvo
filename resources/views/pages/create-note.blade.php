@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <form method="post" enctype="multipart/form-data" action="/documents/create" class="notes-form">
+    <form method="post" enctype="multipart/form-data" action="/docs/create" class="notes-form">
         @csrf
         <div class="fields">
             <div class="field">

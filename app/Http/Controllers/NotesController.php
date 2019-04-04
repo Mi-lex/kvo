@@ -15,7 +15,7 @@ class NotesController extends Controller
 
     public function list()
     {
-        $notes = Note::all();
+        $notes = Note::latest('id')->get();
         
         return view('pages.documents', compact('notes'));
     }

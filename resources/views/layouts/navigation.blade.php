@@ -6,7 +6,7 @@
         'news' => [
             'name' => 'Новости',
         ],
-        'documents' => [
+        'docs' => [
             'name' => 'Документы',
         ],
         'gallary' => [

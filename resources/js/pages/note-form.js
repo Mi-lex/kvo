@@ -5,7 +5,7 @@ var Dropzone = require('../dropzone');
 // dropzone start
 
 Dropzone.options.myDropzone= {
-  url: '/documents/create',
+  url: '/docs/create',
   autoProcessQueue: false,
   uploadMultiple: true,
   parallelUploads: 50,
@@ -31,6 +31,7 @@ Dropzone.options.myDropzone= {
 
       this.on("successmultiple", function(files, response) {
         console.log(response);
+        window.location.href = ("/docs");
       });
 
       this.on("errormultiple", function(files, response) {

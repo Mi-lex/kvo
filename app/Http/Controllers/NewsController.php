@@ -14,7 +14,7 @@ class NewsController extends Controller
  
     public function __construct()
     {
-        $this->images_path = public_path('/images');
+        $this->images_path = public_path('images');
     }
 
     public function list(Request $request)

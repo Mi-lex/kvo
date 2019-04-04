@@ -17,8 +17,8 @@ Auth::routes(['register' => false]);
 Route::get('/', 'NewsController@list')->name('home');
 
 // Store news
-// Route::get('/news/create', 'NewsController@create')->middleware('auth');
-// Route::post('/news/create', 'NewsController@store')->middleware('auth');
+Route::get('/news/create', 'NewsController@create')->middleware('auth');
+Route::post('/news/create', 'NewsController@store')->middleware('auth');
 
 Route::get('/news/create', 'NewsController@create');
 Route::post('/news/create', 'NewsController@store');
@@ -27,10 +27,12 @@ Route::post('/news/create', 'NewsController@store');
 Route::get('/news/{news}', 'NewsController@show');
 
 // Documents
+Route::get('/docs', 'NotesController@list');
 
-Route::get('/documents', 'DocumentsController@list');
+// Store documents
+Route::get('/docs/create', 'NotesController@create')->middleware('auth');
+Route::post('/docs/create', 'NotesController@store')->middleware('auth');
 
-// Store document
+// Download document
 
-Route::get('/documents/create', 'NotesController@create');
-Route::post('/documents/create', 'NotesController@store');
+Route::get('/docs/{document}', 'docsController@download');
