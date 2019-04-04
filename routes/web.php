@@ -20,9 +20,6 @@ Route::get('/', 'NewsController@list')->name('home');
 Route::get('/news/create', 'NewsController@create')->middleware('auth');
 Route::post('/news/create', 'NewsController@store')->middleware('auth');
 
-Route::get('/news/create', 'NewsController@create');
-Route::post('/news/create', 'NewsController@store');
-
 // Show separate news
 Route::get('/news/{news}', 'NewsController@show');
 
