@@ -43,7 +43,7 @@ class NewsController extends Controller
 
     public function create()
     {
-        return view('pages.create');
+        return view('pages.create-news');
     }
 
     public function store(Request $request)
@@ -51,7 +51,6 @@ class NewsController extends Controller
         $news = $request->all();
 
         $images = $request->file('file');
-        $image_models = [];
  
         if (!is_array($images)) {
             $images = [$images];
@@ -60,6 +59,22 @@ class NewsController extends Controller
         if (!is_dir($this->images_path)) {
             mkdir($this->images_path, 0777);
         }
+
+        $image_models = $this->get_image_models($images);
+
+        $news_model = News::create([
+            'title' => $news['title'],
+            'body'  => $news['body']
+        ]);
+
+        $news_model->images()->saveMany($image_models);
+
+        return response()->json(['message' => 'File successfully delete'], 200);
+    }
+
+    private function get_image_models(array $images) : array
+    {
+        $image_models = [];
 
         foreach ($images as $image) {
             $name = sha1(date('YmdHis') . str_random(30));
@@ -83,13 +98,6 @@ class NewsController extends Controller
             $image_models[] = $image_model;
         }
 
-        $news_model = News::create([
-            'title' => $news['title'],
-            'body'  => $news['body']
-        ]);
-
-        $news_model->images()->saveMany($image_models);
-
-        return response()->json(['message' => 'File successfully delete'], 200);
+        return $image_models;
     }
 }

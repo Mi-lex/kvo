@@ -13,10 +13,24 @@
 
 Auth::routes(['register' => false]);
 
-// Home
+// Home/News list
 Route::get('/', 'NewsController@list')->name('home');
 
-Route::get('/news/create', 'NewsController@create')->middleware('auth');
-Route::post('/news/create', 'NewsController@store')->middleware('auth');;
+// Store news
+// Route::get('/news/create', 'NewsController@create')->middleware('auth');
+// Route::post('/news/create', 'NewsController@store')->middleware('auth');
 
+Route::get('/news/create', 'NewsController@create');
+Route::post('/news/create', 'NewsController@store');
+
+// Show separate news
 Route::get('/news/{news}', 'NewsController@show');
+
+// Documents
+
+Route::get('/documents', 'DocumentsController@list');
+
+// Store document
+
+Route::get('/documents/create', 'NotesController@create');
+Route::post('/documents/create', 'NotesController@store');
