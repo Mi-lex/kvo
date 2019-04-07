@@ -59,6 +59,15 @@ return [
             ]) : [],
         ],
 
+        'tracker' => [
+            'driver'   => 'mysql',
+            'host'     => env('DB_HOST', '127.0.0.1'),
+            'database' => 'tracker',
+            'strict' => false,    // to avoid problems on some MySQL installs
+            'username' => env('DB_USERNAME', 'forge'),
+            'password' => env('DB_PASSWORD', ''),
+        ],
+
         'pgsql' => [
             'driver' => 'pgsql',
             'host' => env('DB_HOST', '127.0.0.1'),
