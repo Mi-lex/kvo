@@ -10,7 +10,7 @@ class News extends Model
 
     public function images()
     {
-        return $this->hasMany('App\Image', 'news_id');
+        return $this->morphMany('App\Image', 'imagable');
     }
 
     public function main_image()

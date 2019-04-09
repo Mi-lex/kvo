@@ -16,9 +16,8 @@ class CreateImagesTable extends Migration
         Schema::create('images', function (Blueprint $table) {
             $table->increments('id');
 
-            $table->unsignedInteger('news_id');
-            $table->foreign('news_id')->references('id')->on('news')
-                ->onDelete('cascade');
+            $table->integer('imagable_id');
+            $table->string('imagable_type');
 
             $table->text('filename');
             $table->text('resized_name');
