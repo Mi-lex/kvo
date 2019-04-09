@@ -32,13 +32,12 @@
 				@include vendor('display', 'flex');
 				@include vendor('flex-grow', '1');
 				@include vendor('flex-shrink', '1');
-				font-family: _font(family-heading);
+				font-family: _font(family-ugly);
 				font-weight: _font(weight-heading);
 				letter-spacing: 0.075em;
 				list-style: none;
 				margin-bottom: 0;
 				padding-left: 0;
-				text-transform: uppercase;
 
 				li {
 					display: block;
@@ -50,7 +49,7 @@
 							'color #{_duration(transition)} ease-in-out'
 						));
 						display: block;
-						font-size: 14px;
+						font-size: 20px;
 						outline: none;
 						padding: 0 1.5rem;
 
