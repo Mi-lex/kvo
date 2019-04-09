@@ -52,6 +52,10 @@
 			<ul>
 				<li>&copy; ВАС</li>
 				<li>Design: Mishin Alexey</li>
+				<li>Посетителей сегодня {{ Counter::allVisitors(1) }}</li>
+				<li>Посетителей всего {{ Counter::allVisitors() }}</li>
+				<li>Просмотров сегодня {{ Counter::allHits(1) }}</li>
+				<li>Просмотров всего {{ Counter::allHits() }}</li>
 			</ul>
 		</div>
 
