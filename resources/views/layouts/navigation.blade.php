@@ -6,7 +6,7 @@
         'docs' => [
             'name' => 'Документы',
         ],
-        'gallary' => [
+        'albums' => [
             'name' => 'Фотоальбомы',
         ],
         'contacts' => [

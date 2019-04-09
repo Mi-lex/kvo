@@ -4,9 +4,9 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class News extends Model
+class Album extends Model
 {
-    protected $fillable = ['title', 'body'];
+    protected $fillable = ['title', 'description'];
 
     public function images()
     {

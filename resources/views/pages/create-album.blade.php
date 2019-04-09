@@ -5,12 +5,17 @@
         @csrf
         <div class="fields">
             <div class="field">
-                <label for="description">Описание альбома</label>
+                <label for="title">Заголовок</label>
+                <input type="text" name="title" id="title" />
+            </div>
+
+            <div class="field">
+                <label for="description">Описание фотоальбома</label>
                 <textarea id="description" name="description"></textarea>
             </div>
 
             <div class="field">
-                <label for="name">Фотографии</label>
+                <label for="name">Фотграфии</label>
                 <div id="myDropzone" class="dropzone">
                     <div class="dz-default dz-message">
                         Добавьте фотографии сюда
