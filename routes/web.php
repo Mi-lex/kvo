@@ -31,5 +31,10 @@ Route::get('/docs/create', 'NotesController@create')->middleware('auth');
 Route::post('/docs/create', 'NotesController@store')->middleware('auth');
 
 // Download document
+Route::get('/docs/{document}', 'DocumentsController@download');
 
-Route::get('/docs/{document}', 'docsController@download');
+// Albums
+Route::get('/albums', 'AlbumsController@list');
+
+Route::get('/albums/create', 'AlbumsController@create');
+Route::post('/albums/create', 'AlbumsController@store');

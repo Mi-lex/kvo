@@ -29,6 +29,7 @@ mix.webpackConfig({
 mix.js('resources/js/app.js', 'public/js')
    .js('resources/js/pages/form.js', 'public/js')
    .js('resources/js/pages/note-form.js', 'public/js')
+   .js('resources/js/pages/album-form.js', 'public/js')
    .js('resources/js/pages/news.js', 'public/js')
    .sass('resources/sass/main.scss', 'public/css')
    .sass('resources/sass/noscript.scss', 'public/css')
