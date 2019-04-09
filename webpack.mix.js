@@ -1,5 +1,14 @@
 const mix = require('laravel-mix');
 const path = require('path');
+const fs = require('fs');
+
+const getFiles = function (dir) {
+    // get all 'files' in this directory
+    // filter directories
+    return fs.readdirSync(dir).filter(file => {
+        return fs.statSync(`${dir}/${file}`).isFile();
+    });
+};
 
 /*
  |--------------------------------------------------------------------------
@@ -27,14 +36,13 @@ mix.webpackConfig({
 
 
 mix.js('resources/js/app.js', 'public/js')
-   .js('resources/js/pages/form.js', 'public/js')
-   .js('resources/js/pages/note-form.js', 'public/js')
-   .js('resources/js/pages/album-form.js', 'public/js')
-   .js('resources/js/pages/news.js', 'public/js')
    .sass('resources/sass/main.scss', 'public/css')
    .sass('resources/sass/noscript.scss', 'public/css')
    .copy('resources/images', 'public/images', false);
 
+getFiles('resources/js/pages').forEach(function (filepath) {
+    mix.js('resources/js/pages/' + filepath, 'public/js');
+});
 
 // For changing only css
 // mix.sass('resources/sass/main.scss', 'public/css');
