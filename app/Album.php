@@ -15,6 +15,6 @@ class Album extends Model
 
     public function main_image()
     {
-        return $this->images()->first()->filename;    
+        return $this->images()->first()->filename;
     }
 }
