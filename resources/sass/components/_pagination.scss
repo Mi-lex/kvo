@@ -14,6 +14,13 @@
 		margin: 0 0 _size(element-margin) 2px;
 		padding: 0;
 
+		li.active {
+			.page-link {
+				background-color: black;
+				color: white;
+			}
+		}
+
 		a, span {
 			@include vendor('transition', (
 				'background-color #{_duration(transition)} ease-in-out',
