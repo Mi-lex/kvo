@@ -24,9 +24,5 @@ class ViewServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        View::composer('*', function ($view) {
-            $view_name = str_replace('.', '/', $view->getName());
-            \Counter::showAndCount($view_name);
-        });
     }
 }
