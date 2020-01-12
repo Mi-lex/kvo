@@ -3,6 +3,8 @@
 use App\News;
 use App\Image;
 use Illuminate\Database\Seeder;
+use Illuminate\Http\UploadedFile;
+use Faker\Generator as Faker;
 
 class NewsTableSeeder extends Seeder
 {
@@ -11,10 +13,10 @@ class NewsTableSeeder extends Seeder
      *
      * @return void
      */
-    public function run()
+    public function run(Faker $faker)
     {
-        factory(News::class, 10)->create()->each(function ($news) {
-            $news->images()->saveMany(factory(Image::class, 4)->make());
-        });;
+        factory(News::class, 10)->create()->each(function ($news) use ($faker) {
+            $news->images()->saveMany(factory(Image::class, 5)->make());
+        });
     }
 }

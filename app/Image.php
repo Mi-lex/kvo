@@ -13,31 +13,34 @@ class Image extends Model
     {
         return $this->morphTo();    
     }
-    
+   
+    static function get_valid_image(object $imageFile) : array
+    {
+        $name = sha1(date('YmdHis') . str_random(30));
+        $filename = $name . '.' . $imageFile->getClientOriginalExtension();
+        $resize_name = $name . '.small.' . $imageFile->getClientOriginalExtension();
+
+        ImageInterventor::make($imageFile)
+            ->resize(250, null, function ($constraints) {
+                $constraints->aspectRatio();
+            })
+            ->save(public_path('images') . '/' . $resize_name);
+
+        $imageFile->move(public_path('images'), $filename);
+
+        return [
+            'filename'      => $filename,
+            'resized_name'  => $resize_name,
+            'original_name' => basename($imageFile->getClientOriginalName())
+        ];
+    }
+
     static function convert_to_models(array $images) : array
     {
         $image_models = [];
 
         foreach ($images as $image) {
-            $name = sha1(date('YmdHis') . str_random(30));
-            $filename = $name . '.' . $image->getClientOriginalExtension();
-            $resize_name = $name . '.small.' . $image->getClientOriginalExtension();
- 
-            ImageInterventor::make($image)
-                ->resize(250, null, function ($constraints) {
-                    $constraints->aspectRatio();
-                })
-                ->save(public_path('images') . '/' . $resize_name);
- 
-            $image->move(public_path('images'), $filename);
-
-            $image_model = new Image([
-                'filename'      => $filename,
-                'resized_name'  => $resize_name,
-                'original_name' => basename($image->getClientOriginalName())
-            ]);
-
-            $image_models[] = $image_model;
+            $image_models[] = new Image($self::get_valid_image($image));
         }
 
         return $image_models;
