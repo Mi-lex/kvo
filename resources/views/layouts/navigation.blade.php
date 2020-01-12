@@ -9,13 +9,13 @@
         'albums' => [
             'name' => 'Фотоальбомы',
         ],
-        'contacts' => [
+        '#contacts' => [
             'name' => 'Контакты',
         ],
-        'vacation' => [
+        '#vacation' => [
             'name' => 'Базы отдыха',
         ],
-        'huntinginfo' => [
+        '#huntinginfo' => [
             'name' => 'Охотминимум',
         ],
     ];
